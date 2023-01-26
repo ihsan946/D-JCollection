@@ -3,7 +3,7 @@
 
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="../home.php">
+      <a class="navbar-brand" href="home.php">
         <img style="width:14vw; height:7vh; padding-top:0px;" alt="Home" src="asset/img/Home.jpeg">
       </a>
     </div>
@@ -36,7 +36,7 @@
         $conn = mysqli_connect('localhost', 'root', '', 'batiku');
         if (isset($_SESSION['idUser'])) {
           echo '
-            <a class="not-active" href="keranjang.php" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
+            <a class="not-active" href="../keranjang.php" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
           ';
         } else {
           echo '

@@ -25,7 +25,7 @@ $idTransaksi = $_GET['idTransaksi'];
             <div class="col-xs-2" id="sideLeft">
                 <h4><strong>Administrator</strong></h4>
                 <ul class="nav nav-pills nav-stacked" id="data">
-                    <li><a href="proses/logout.php">
+                    <li><a href="logout.php">
                             <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span>Logout</button></a>
                     </li>
                 </ul>

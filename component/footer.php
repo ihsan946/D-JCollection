@@ -2,14 +2,14 @@
 <div class="container-fluid" id="footer">
   <div class="row">
     <div class="col-xs-3 text-white">
-      <img src="../asset/img/Halamandepan.jpg" height="200" width="300">
+      <img src="asset/img/Halamandepan.jpg" height="200" width="300">
     </div>
 
     <div class="col-xs-3 col-xs-offset-1 text-white">
       <h3 style="font-family:Cooper Std Black">Hubungi Kami</h3>
       <hr>
-      <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="../asset/img/facebook.png"></a>
-      <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="../asset/img/instagram.png"></a>
+      <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="asset/img/facebook.png"></a>
+      <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="asset/img/instagram.png"></a>
 
       <style type="text/css">
         .element {
