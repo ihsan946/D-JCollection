@@ -581,13 +581,14 @@ if (!isset($_SESSION['idAdmin'])) {
                       <th class="id-transaksi">Total</th>
                       <th class="alamat-user">Alamat User</th>
                       <th class="id-transaksi">Tanggal</th>
+                      <th class="id-transaksi">Status</th>
                       <th class="hapus text-center">Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php
                     $conn = mysqli_connect('localhost', 'root', '', 'batiku');
-                    $queryBarang = mysqli_query($conn, "SELECT idTransaksi,tabel_user.namaUser as namaPelanggan, daftarBarang, total, tabel_user.alamat as alamat, tanggal FROM `tabel_transaksi`,`tabel_user` WHERE tabel_transaksi.idUser = tabel_user.idUser;");
+                    $queryBarang = mysqli_query($conn, "SELECT idTransaksi,tabel_user.namaUser as namaPelanggan, daftarBarang, total, tabel_user.alamat as alamat, tanggal, status FROM `tabel_transaksi`,`tabel_user` WHERE tabel_transaksi.idUser = tabel_user.idUser;");
 
                     $jumlah = mysqli_num_rows($queryBarang);
 
@@ -598,6 +599,7 @@ if (!isset($_SESSION['idAdmin'])) {
                             <td></td>
                             <td></td>
                             <td style="width: 50vw">Belum Ada Transaksi</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -615,6 +617,8 @@ if (!isset($_SESSION['idAdmin'])) {
                             <td class="id-transaksi text-center">Rp. ' . $arrayBarang['total'] . '</td>
                             <td class="alamat-user text-left">' . $arrayUser['alamat'] . '</td>
                             <td class="id-transaksi text-center">' . $arrayBarang['tanggal'] . '</td>
+                            <td class="id-transaksi text-center">' . $arrayBarang['status'] . '</td>
+                            <td class="edit"><a href="proses/editStatus.php?idTransaksi=' . $arrayBarang['idTransaksi'] . '"><button type="button" class="btn btn-edit"><i class="glyphicon glyphicon-edit"></i></button></a></td>
                             <td class="hapus"><a href="proses/hapusTransaksi.php?idTransaksi=' . $arrayBarang['idTransaksi'] . '"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a></td>
                           </tr>
 
