@@ -36,7 +36,7 @@
         $conn = mysqli_connect('localhost', 'root', '', 'batiku');
         if (isset($_SESSION['idUser'])) {
           echo '
-            <a class="not-active" href="../keranjang.php" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
+            <a class="not-active" href="keranjang.php" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
           ';
         } else {
           echo '
