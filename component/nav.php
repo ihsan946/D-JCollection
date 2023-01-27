@@ -53,9 +53,15 @@
         <?php
         $conn = mysqli_connect('localhost', 'root', '', 'batiku');
         if (isset($_SESSION['idUser'])) {
-          echo '
-            <a class="not-active" href="keranjang.php" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
-          ';
+          if ($_SESSION['page'] == "UploadTF") {
+            echo '
+              <a class="not-active" href="../keranjang.php" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
+            ';
+          } else {
+            echo '
+              <a class="not-active" href="keranjang.php" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
+            ';
+          }
         } else {
           echo '
             <a class="not-active" href="#" data-toggle="tooltip" data-placement="bottom" title="Keranjang"  ><i class="glyphicon glyphicon-shopping-cart" id="trolly"></i></a>
