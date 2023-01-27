@@ -38,7 +38,7 @@
             background-color: white;"><b>Logout</b></button></a>
             <li>
                 <a href="proses/upload_tf.php"><button class="btn navbar-btn" id="btn-logout" style="color:#7986cb;margin-top:-0.8vh;
-                        background-color: white;"><b>Upload Bukti Pembayaran</b></button></a>
+                        background-color: white;"><b>Bukti Pembayaran</b></button></a>
             </li>
             ';
           }
