@@ -7,9 +7,18 @@
 
     <div class="col-xs-3 col-xs-offset-1 text-white">
       <h3 style="font-family:Cooper Std Black">Hubungi Kami</h3>
-      <hr>
-      <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="asset/img/facebook.png"></a>
-      <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="asset/img/instagram.png"></a>
+      <?php
+      if ($_SESSION['page'] != "Home") {
+      ?>
+        <hr>
+        <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="../asset/img/facebook.png"></a>
+        <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="../asset/img/instagram.png"></a>
+      <?php } else {
+      ?>
+        <hr>
+        <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="asset/img/facebook.png"></a>
+        <a href="" target="_blank"><img style="width: 40px; height: 40px; margin-right: 1vw;" src="asset/img/instagram.png"></a>
+      <?php } ?>
 
       <style type="text/css">
         .element {

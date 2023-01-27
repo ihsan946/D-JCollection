@@ -1,6 +1,7 @@
 <?php
 require('../config/db.php');
 session_start();
+$_SESSION['page'] = "UploadTF";
 ?>
 
 

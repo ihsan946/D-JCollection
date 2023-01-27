@@ -2,6 +2,7 @@
 require('../config/db.php');
 session_start();
 
+
 $idTransaksi = $_POST['idTransaksi'];
 $query_update = "UPDATE `tabel_transaksi` SET `status` = 'Proses' WHERE `tabel_transaksi`.`idTransaksi` = $idTransaksi";
 

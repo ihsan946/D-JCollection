@@ -2,11 +2,21 @@
 <nav class="navbar navbar-fixed">
 
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="home.php">
-        <img style="width:14vw; height:7vh; padding-top:0px;" alt="Home" src="asset/img/Home.jpeg">
-      </a>
-    </div>
+    <?php if ($_SESSION['page'] == "UploadTF") { ?>
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../home.php">
+          <img style="width:14vw; height:7vh; padding-top:0px;" alt="Home" src="../asset/img/Home.jpeg">
+        </a>
+      </div>
+    <?php } else { ?>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.php">
+          <img style="width:14vw; height:7vh; padding-top:0px;" alt="Home" src="asset/img/Home.jpeg">
+        </a>
+      </div>
+    <?php } ?>
+
 
     <ul class="nav navbar-nav navbar-right">
       <li>
@@ -16,14 +26,22 @@
           $iduser = $_SESSION['idUser'];
           $queryUser = mysqli_query($conn, "SELECT * FROM tabel_user WHERE idUser='$_SESSION[idUser]'");
           $arrayUser = mysqli_fetch_array($queryUser);
-          echo '
-                <a href="proses/logout.php"><button class="btn navbar-btn" id="btn-logout" style="color:#7986cb;margin-top:-0.8vh;
-                background-color: white;"><b>Logout</b></button></a>
-                <li>
-                  <a href="proses/upload_tf.php"><button class="btn navbar-btn" id="btn-logout" style="color:#7986cb;margin-top:-0.8vh;
-                          background-color: white;"><b>Upload Bukti Pembayaran</b></button></a>
-                </li>
+          if ($_SESSION['page'] == "UploadTF") {
+            echo '
+              <a href="logout.php"><button class="btn navbar-btn" id="btn-logout" style="color:#7986cb;margin-top:-0.8vh;
+              background-color: white;"><b>Logout</b></button></a>
+              
             ';
+          } else {
+            echo '
+            <a href="proses/logout.php"><button class="btn navbar-btn" id="btn-logout" style="color:#7986cb;margin-top:-0.8vh;
+            background-color: white;"><b>Logout</b></button></a>
+            <li>
+                <a href="proses/upload_tf.php"><button class="btn navbar-btn" id="btn-logout" style="color:#7986cb;margin-top:-0.8vh;
+                        background-color: white;"><b>Upload Bukti Pembayaran</b></button></a>
+            </li>
+            ';
+          }
         } else {
           echo '
                 <button class="btn navbar-btn" id="btn-login"><b>Login</b></button>
